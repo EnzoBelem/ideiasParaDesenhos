@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+:root{
+    --pc-brand-color: hsl(234, 100%, 65%);
+    --pc-brand-color-hover: hsl(234, 72%, 57%);
+    --pc-brand-color-ligth: hsl(235, 100%, 93%);
+    --pc-brand-color-ligth-2: hsla(234, 100%, 65%, 0.12);
+    --sc-gray-headline: hsl(0, 0%, 0%);
+    --sc-gray-paragraph: hsl(0, 0%, 22%);
+
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.6rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: min(88.3rem, 100%);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: var(--pc-brand-color);
+    border: none;
+    border-radius: 3rem;
+    padding: 1.6rem 2.1rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: var(--pc-brand-color-hover);
+}
+
+/*==== Image Background Formats ===========================================*/
+
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .3;
+    object-fit: cover;
+    filter: blur(5px);
+    transform: scale(1.1); 
+    z-index: -1;
+}
+
+/*==== Home Formats ===========================================*/
+
+#home{
+    height: 95%;   
+    background-color: var(--pc-brand-color-ligth-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#home .container{
+    align-items: center;
+    justify-content: center;
+}
+
+#home h3{
+    color: var(--pc-brand-color);
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    line-height: 150%;
+    letter-spacing: 0.08rem;
+    margin-bottom: 2rem;
+}
+
+#home h1{
+    color: var(--sc-gray-headline);
+    text-align: center;
+    font-size: 5.2rem;
+    line-height: 6.8rem;
+    margin-bottom: 4rem;
+}
+
+#home p{
+    font-size: 2rem;
+    line-height: 2.6rem;
+    color: var(--sc-gray-paragraph);
+    margin-bottom: 7.6rem;
+}
+
+/*==== sugestion Formats ===========================================*/
+
+#sugestion{
+    height: 100%;   
+    background-color: var(--pc-brand-color-ligth);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#sugestion .container{
+    align-items: center;
+    justify-content: center;
+}
+
+#sugestion h2{
+    font-size: 4.4rem;
+    line-height: 6.2rem;
+    color: var(--sc-gray-headline);
+}
+
+#sugestion h2 span{
+    display: inline;
+    color: var(--pc-brand-color);
+}
+
+#sugestion h3{
+    color: var(--pc-brand-color);
+    line-height: 150%;
+    font-size: 1.6rem;
+    letter-spacing: 0.08rem;
+    margin-block: 2.2rem;
+}

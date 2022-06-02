@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--pc-brand-color) var(--pc-brand-color-ligth);
 }
 
 html{
@@ -136,11 +138,6 @@ a{
     color: var(--sc-gray-headline);
 }
 
-#sugestion h2 span{
-    display: inline;
-    color: var(--pc-brand-color);
-}
-
 #sugestion h3{
     color: var(--pc-brand-color);
     line-height: 150%;
@@ -148,3 +145,49 @@ a{
     letter-spacing: 0.08rem;
     margin-block: 2.2rem;
 }
+
+/*==== sugestion idea Formats ===========================================*/
+h2#sugestion_data{
+    font-size: 6rem;
+    line-height: 6.2rem;
+    margin-block: 3rem;
+    position: relative;
+    color: var(--pc-brand-color);
+    animation: sugestionAnimation 5s linear infinite;
+}
+
+@keyframes sugestionAnimation{
+    0%{transform: none}
+    25%{transform: rotate(2.5deg)}
+    50%{transform: none}
+    75%{transform: rotate(-2.5deg)}
+    100%{transform: none}
+}
+
+@keyframes sugestionAnimationHidden{
+    from{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY();
+    }
+    to{ 
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes sugestionAnimationShow{
+    from{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-50%);
+    }
+    to{ 
+        opacity: 1;
+        visibility: visible;
+        transform: translateY();
+    }
+}
+
+/*==== scrollbar style Formats ===========================================*/
